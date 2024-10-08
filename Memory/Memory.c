@@ -138,5 +138,5 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
     TranslateMessage(&Message);             //перевод сообщений клавиш в сообщения символов (WM_KEYDOWN -> WM_CHAR)
     DispatchMessage(&Message);              //посылает информацию о сообщении в WindowProcess
   }
-  return Message.wParam;                    //возрат значения выхода последнего сообщения
+  return (int)Message.wParam;                    //возрат значения выхода последнего сообщения
 }
